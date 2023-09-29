@@ -1,0 +1,18 @@
+{% extends 'common.html' %}
+{% block body %}
+
+<div class=" shadow card" >
+
+            <div class="card-header" >
+                      TODO LIST
+            </div>
+            <div class="card-body" >
+            <h5 class="card-title">{{key1.name}}</h5>
+            <p class="card-text">{{key1.priority}}</p>
+                <p class="card-text">{{key1.date}}</p>
+            <a href="{% url 'todoapp:delete' key1.id %}" class="btn btn-primary">Delete</a>
+                <a href="{% url 'todoapp:update' key1.id %}" class="btn btn-success">Update</a>
+            </div>
+
+</div>
+{% endblock %}
